@@ -1,109 +1,350 @@
-# Magic Writing Experience (灵感笔迹)
+# Magic Writing Experience｜灵感笔迹
 
-[English](#english) | [简体中文](#简体中文)
+一个面向长篇小说、剧本与世界观创作的 AI 辅助创作工具 UI/UX Demo。
 
----
-
-<a name="english"></a>
-## English
-
-### Overview
-**Magic Writing Experience** is a minimalist, distraction-free text editor designed for storytellers and creative writers. It integrates a powerful AI co-pilot to help you overcome writer's block with seamless completions, context-aware editing ("Magic Edits"), and deep world-building integration ("Lore Settings").
-
-### Key Features
-- **Block-Based Editor**: A clean, modular writing experience where every paragraph or heading is a manageable block.
-- **AI Co-pilot**: Get intelligent continuation of your prose based on your current tone and context.
-- **Magic Edits**: Highlight text and invoke AI to rewrite, expand, or polish your writing with creative precision.
-- **Lore Settings**: Build your story's universe (World, Characters, Plots) and have the AI use these settings as background knowledge for higher consistency.
-- **Distraction-Free Design**: Minimalist UI that keeps the focus on your words, featuring a Zen-like atmosphere.
-- **Multi-File Management**: Organized file explorer and sidebar to manage drafts and chapters.
-- **Mobile Responsive**: Write and edit on the go with a fully responsive mobile interface.
-
-### Tech Stack
-- **Frontend**: React 19 + TypeScript
-- **Styling**: Tailwind CSS 4
-- **Animations**: Motion (Framer Motion)
-- **Icons**: Lucide React
-- **AI Engine**: Google Gemini API (@google/genai)
-- **Build Tool**: Vite
-
-### Getting Started
-
-#### Prerequisites
-- Node.js (Latest LTS recommended)
-- Gemini API Key
-
-#### Installation
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Set up environment variables:
-   Create a `.env` file and add your Gemini API Key:
-   ```env
-   GEMINI_API_KEY=your_api_key_here
-   ```
-
-#### Development
-Run the development server:
-```bash
-npm run dev
-```
-The application will be available at `http://localhost:3000`.
+> AI 是助手，不是神器。  
+> 创作的核心，始终应该由人来做决策和思考。
 
 ---
 
-<a name="简体中文"></a>
-## 简体中文
+## 在线体验
 
-### 项目简介
-**Magic Writing Experience (灵感笔迹)** 是一款专为故事创作者和创意写作设计的极简、无干扰文本编辑器。它集成了一个强大的 AI 副驾驶，通过平滑的续写建议、上下文感知的“划词修改”以及深度嵌入的“世界观设定”，助您摆脱写作瓶颈。
+Demo 地址：
 
-### 核心功能
-- **块状编辑器**：极简且模块化的写作体验，每一个段落或标题都是一个可独立管理的块。
-- **AI 智能续写**：根据当前的语境、语气和逻辑，为您提供智能的文字延续方案。
-- **划词魔法修改**：只需选中文字，即可调用 AI 进行重写、扩写或修辞优化，精准提升文笔。
-- **设定集系统**：构建故事的世界观、角色和剧情脉络，AI 会将这些设定作为背景知识注入，确保创作逻辑的高度一致。
-- **沉浸式设计**：摒弃杂乱，提供完全聚焦于文字本身的 Zen 风格界面。
-- **多文档管理**：内置文件资源管理器和侧边栏，轻松管理草稿与章节大纲。
-- **移动端适配**：响应式布局支持，随时随地开启创作模式。
+https://html-write-demo.netlify.app/
 
-### 技术栈
-- **前端核心**：React 19 + TypeScript
-- **样式方案**：Tailwind CSS 4
-- **动画动效**：Motion (Framer Motion)
-- **图标库**：Lucide React
-- **AI 引擎**：Google Gemini API (@google/genai)
-- **构建工具**：Vite
+GitHub 仓库：
 
-### 快速开始
+https://github.com/zep1n/zephyr-html-write-demo
 
-#### 环境要求
-- Node.js (推荐最新的 LTS 版本)
-- Gemini API Key
+---
 
-#### 安装步骤
-1. 克隆仓库：
-   ```bash
-   git clone <repository-url>
-   ```
-2. 安装依赖：
-   ```bash
-   npm install
-   ```
-3. 配置环境：
-   创建一个 `.env` 文件并填入您的 Gemini API Key：
-   ```env
-   GEMINI_API_KEY=your_api_key_here
-   ```
+## 当前状态
 
-#### 本地开发
-启动开发服务器：
+当前项目是一个 **UI/UX 演示版本**，主要用于展示 AI 辅助创作软件的产品形态、交互流程和核心设计思路。
+
+当前版本暂未接入真实 AI 能力。
+
+也就是说：
+
+- 不会真实调用 Gemini / OpenAI / Claude 等模型
+- 不需要填写 API Key
+- 不会产生真实 AI 生成内容
+- 当前重点是展示产品设计、界面结构和创作工作流
+- 适合作为作品集 Demo、产品原型展示和 AI-native 工具设计案例
+
+---
+
+## 项目定位
+
+Magic Writing Experience｜灵感笔迹，是一个为长篇小说、剧本和世界观创作者设计的 AI 辅助创作工具原型。
+
+它不是一个追求“一键生成”的写作工具，而是希望把 AI 从普通聊天窗口，升级为一个更加结构化、可控、适合长期创作的专业创作工作台。
+
+我的核心认知是：
+
+- 创作一定要由人做决策和思考
+- AI 应该是助手，而不是替代创作者的神器
+- 当所有人都可以使用 AI 时，真正的差距会重新回到创作者本身的判断力、审美和创作技能
+- 一键生成并不稀缺，真正重要的是如何控制 AI、组织内容、管理设定，并持续创作
+
+这个项目围绕一个核心问题展开：
+
+> 当 AI 被用于长篇创作时，如何减少它的遗忘、跑题和风格漂移？
+
+---
+
+## 为什么做这个项目
+
+在使用 AI 辅助长篇小说或剧本创作时，经常会遇到这些问题：
+
+- AI 不按原本设定乱写
+- 上下文过长后遗忘人物关系
+- 世界观规则前后不一致
+- 新生成段落和原文风格脱节
+- 每次生成都要重复解释人物、背景和写作要求
+- 设定散落在聊天记录中，难以长期管理
+- 创作者很难持续控制 AI 的输出方向
+
+普通 AI 对话适合短内容生成，但对于长篇创作来说，单纯依赖聊天窗口并不稳定。
+
+因此，这个项目尝试将 AI 写作从：
+
+> 聊天式生成
+
+转变为：
+
+> 结构化创作工作台
+
+让创作者可以把世界观、人设、关键词、风格要求和剧情约束沉淀为可管理的信息，再围绕这些信息进行创作。
+
+---
+
+## 设计理念
+
+这个项目的设计理念是：
+
+> 不做一键生成工具，而是做创作者的专业辅助工作台。
+
+创作者仍然需要负责：
+
+- 判断故事方向
+- 设计人物命运
+- 控制世界观规则
+- 调整文本节奏
+- 统一作品风格
+- 决定哪些内容保留、修改或删除
+
+AI 的角色应该是：
+
+- 帮助整理信息
+- 提供创作建议
+- 辅助生成草稿
+- 补充灵感方向
+- 帮助维持设定一致性
+
+最终的创作主导权，应该始终属于人。
+
+---
+
+## 核心功能设计
+
+### 1. 沉浸式创作工作台
+
+项目提供一个干净、低干扰的创作界面，用于承载长时间写作、灵感整理和内容编辑。
+
+界面设计尽量减少复杂干扰，让创作者可以把注意力放在故事、文本和设定本身。
+
+---
+
+### 2. 世界观与人物设定管理
+
+创作者可以在系统中整理和维护：
+
+- 世界观背景
+- 人物设定
+- 人物关系
+- 故事冲突
+- 关键规则
+- 重要关键词
+- 创作方向
+
+这些信息在产品设计中会成为 AI 辅助创作时的重要参考依据。
+
+当前 Demo 主要展示这一套信息管理结构和界面形态。
+
+---
+
+### 3. AI 创作侧重配置
+
+项目设计了 AI 创作侧重设置，用于帮助创作者提前定义当前作品的创作类型和生成方向。
+
+例如：
+
+- 小说
+- 剧本
+- 长篇
+- 短篇
+- 角色驱动
+- 世界观驱动
+- 情绪氛围驱动
+- 情节推进驱动
+
+这类配置的目标是让 AI 在创作前先理解作品的基本类型和表达重点，减少生成内容与创作者预期不一致的问题。
+
+---
+
+### 4. 创作建议栏
+
+Demo 中设计了专门的建议栏，用于承载 AI 对当前创作内容的辅助建议。
+
+它可以用于展示：
+
+- 剧情建议
+- 人物动机建议
+- 世界观补充建议
+- 节奏调整建议
+- 冲突强化建议
+- 文风优化建议
+
+在未来真实 AI 接入后，这一部分可以成为创作者与 AI 协作的重要入口。
+
+---
+
+### 5. 本地记忆系统概念
+
+“本地记忆系统”是本项目中最重要的产品概念之一。
+
+它的核心不是让 AI 自己无限记忆，而是让创作者主动管理关键设定，再由系统在生成内容时组织这些设定，辅助 AI 更稳定地理解作品。
+
+它可以包括：
+
+- 已确认的世界观规则
+- 人物核心设定
+- 关键剧情信息
+- 章节方向
+- 作品语气
+- 禁止违背的设定
+- 需要反复提醒 AI 的关键词
+
+这样做的目标是缓解 AI 在长篇创作中常见的“失忆”问题。
+
+当前 Demo 展示的是这一机制的产品形态和交互思路，暂未实现真实的 AI 上下文注入或持久化记忆逻辑。
+
+---
+
+## 和普通 AI 对话的区别
+
+普通 AI 对话通常是线性的。
+
+创作者在聊天窗口中不断输入提示词、补充要求、纠正错误，但大量设定会散落在对话历史中，很难长期管理。
+
+Magic Writing Experience 想展示的是另一种方式：
+
+| 普通 AI 对话 | Magic Writing Experience |
+|---|---|
+| 依赖聊天记录 | 依赖结构化设定 |
+| 适合短内容 | 面向长篇创作 |
+| 设定容易散落 | 设定集中管理 |
+| 容易上下文遗忘 | 尝试通过本地记忆系统缓解 |
+| 每次都要重复说明 | 通过创作配置减少重复输入 |
+| 更像聊天工具 | 更像创作工作台 |
+
+这个项目关注的不是“让 AI 写得更多”，而是“让创作者更好地控制 AI”。
+
+---
+
+## 使用流程设想
+
+一个完整的使用流程可以是：
+
+1. 创建一个作品项目
+2. 填写或生成世界观设定
+3. 整理人物设定和人物关系
+4. 设置作品类型，例如小说、剧本、长篇或短篇
+5. 配置 AI 创作侧重
+6. 管理关键词和关键剧情规则
+7. 开始创作正文内容
+8. 根据创作结果继续补充设定和调整方向
+9. 让后续内容持续贴合作品原本的设定与风格
+
+当前 Demo 主要展示前端界面和交互流程，后续可以继续扩展真实 AI 生成、设定存储和上下文管理能力。
+
+---
+
+## 适合人群
+
+这个项目主要面向：
+
+- 小说作者
+- 剧本创作者
+- 世界观设定创作者
+- AI 写作爱好者
+- 内容创作者
+- 想要长期创作原创故事的人
+- 对 AI 输出稳定性有更高要求的用户
+- 对 AI-native 产品设计感兴趣的团队或招聘方
+
+尤其适合那些已经尝试过 AI 写作，但经常遇到 AI 遗忘设定、乱写、跑题、风格漂移问题的创作者。
+
+---
+
+## 技术栈
+
+当前项目基于现代前端技术构建：
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Motion / Framer Motion
+- Lucide React
+
+部署平台：
+
+- Netlify
+
+---
+
+## 本地运行
+
+克隆项目：
+
 ```bash
+git clone https://github.com/zep1n/zephyr-html-write-demo.git
+
+进入项目目录：
+
+cd zephyr-html-write-demo
+
+安装依赖：
+
+npm install
+
+启动开发环境：
+
 npm run dev
-```
-应用将在 `http://localhost:3000` 运行。
+
+构建生产版本：
+
+npm run build
+
+本地预览构建结果：
+
+npm run preview
+部署方式
+
+当前项目已部署到 Netlify。
+
+在线地址：
+
+https://html-write-demo.netlify.app/
+
+如果自行部署，可以使用以下配置：
+
+Build command: npm run build
+Publish directory: dist
+后续计划
+
+后续可以继续扩展以下方向：
+
+接入真实 AI 模型
+支持 Gemini / OpenAI / Claude 等 API
+增加本地设定存储
+支持多作品管理
+支持章节管理
+支持人物关系图谱
+支持世界观数据库
+支持关键词和设定自动注入 prompt
+支持 AI 生成内容版本管理
+支持创作风格控制
+支持导出 Markdown / TXT / PDF
+支持创作者个人作品库
+项目价值
+
+这个 Demo 主要展示的是一个 AI-native 创作工具的产品设计思路。
+
+它关注的不只是“AI 能不能生成文字”，而是更进一步的问题：
+
+AI 如何参与专业创作流程？
+长篇创作中如何管理复杂设定？
+创作者如何保持对 AI 的控制权？
+AI 工具如何从聊天窗口进化为专业工作台？
+如何让 AI 更适合持续创作，而不是一次性生成？
+核心观点
+
+你能一键生成，别人也可以。
+
+当 AI 成为所有人的工具，真正重要的不是谁会点按钮，而是谁能更好地思考、判断、组织和创作。
+
+AI 不应该替代创作者。
+
+AI 应该成为创作者的专业助手。
+
+License
+
+This project is currently for UI/UX demo and personal showcase purposes.
+
+
+你现在要改的重点是：**把当前 README 里“Gemini API Key 必填”“AI Co-pilot 已集成”这类表述删掉**，否则访客会以为 Demo 坏了，或者误解为你做了一个未配置好的 AI 应用。你的 `package.json` 里确实有 `vite build`、`vite preview`、React、Tailwind、Motion、Lucide 等依赖，所以我保留了前端技术栈和运行命令，但把“真实 AI 引擎”改成了“后续计划”。:contentReference[oaicite:1]{index=1}
+::contentReference[oaicite:2]{index=2}
