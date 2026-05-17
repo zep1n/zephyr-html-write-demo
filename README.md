@@ -345,6 +345,3 @@ License
 
 This project is currently for UI/UX demo and personal showcase purposes.
 
-
-你现在要改的重点是：**把当前 README 里“Gemini API Key 必填”“AI Co-pilot 已集成”这类表述删掉**，否则访客会以为 Demo 坏了，或者误解为你做了一个未配置好的 AI 应用。你的 `package.json` 里确实有 `vite build`、`vite preview`、React、Tailwind、Motion、Lucide 等依赖，所以我保留了前端技术栈和运行命令，但把“真实 AI 引擎”改成了“后续计划”。:contentReference[oaicite:1]{index=1}
-::contentReference[oaicite:2]{index=2}
